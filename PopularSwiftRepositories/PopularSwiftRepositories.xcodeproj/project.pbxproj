@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		987D562B2ED6474D00F85F5F /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 987D562A2ED6474D00F85F5F /* InlineSnapshotTesting */; };
+		987D562D2ED6474D00F85F5F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 987D562C2ED6474D00F85F5F /* SnapshotTesting */; };
+		987D562F2ED6474D00F85F5F /* SnapshotTestingCustomDump in Frameworks */ = {isa = PBXBuildFile; productRef = 987D562E2ED6474D00F85F5F /* SnapshotTestingCustomDump */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		989483932ECF5F610009D709 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -43,7 +49,6 @@
 				"Global/Extensions/Color+Extension.swift",
 				"Global/Extensions/Image+Extension.swift",
 				"Global/Extensions/UIColor+Extension.swift",
-				"Global/Extensions/View+Extension.swift",
 				Global/Navigation/Router.swift,
 				Global/Navigation/RouterProtocol.swift,
 				Global/Navigation/RouterViewModifier.swift,
@@ -65,7 +70,6 @@
 				PopularRepositoriesList/PopularRepositoriesViewModel.swift,
 				PopularRepositoriesList/PopularSwiftRepositoriesModel.swift,
 				PopularRepositoriesList/PopularSwiftRepositoriesURLBuilder.swift,
-				PopularSwiftRepositoriesApp.swift,
 				PullRequestDetails/PullRequestDetailsView.swift,
 				PullRequestList/PullRequestListProtocols.swift,
 				PullRequestList/PullRequestListRepository.swift,
@@ -83,7 +87,6 @@
 				"Global/Extensions/Color+Extension.swift",
 				"Global/Extensions/Image+Extension.swift",
 				"Global/Extensions/UIColor+Extension.swift",
-				"Global/Extensions/View+Extension.swift",
 				Global/Navigation/Router.swift,
 				Global/Navigation/RouterProtocol.swift,
 				Global/Navigation/RouterViewModifier.swift,
@@ -105,7 +108,6 @@
 				PopularRepositoriesList/PopularRepositoriesViewModel.swift,
 				PopularRepositoriesList/PopularSwiftRepositoriesModel.swift,
 				PopularRepositoriesList/PopularSwiftRepositoriesURLBuilder.swift,
-				PopularSwiftRepositoriesApp.swift,
 				PullRequestDetails/PullRequestDetailsView.swift,
 				PullRequestList/PullRequestListProtocols.swift,
 				PullRequestList/PullRequestListRepository.swift,
@@ -116,6 +118,17 @@
 				PullRequestList/Views/PullRequestStatusSelector.swift,
 			);
 			target = 9894839B2ECF5F610009D709 /* PopularSwiftRepositoriesUITests */;
+		};
+		987D55FF2ED5FAD900F85F5F /* Exceptions for "PopularSwiftRepositoriesTests" folder in "PopularSwiftRepositories" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				DataMock/PopularRepositoriesResponse.json,
+				DataMock/PopularRepositoriesResponseDecodingError.json,
+				DataMock/PullRequestListResponse.json,
+				DataMock/PullRequestListResponseDecodingError.json,
+				DataMock/UserItemListResponse.json,
+			);
+			target = 989483842ECF5F5F0009D709 /* PopularSwiftRepositories */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -132,12 +145,10 @@
 		};
 		989483952ECF5F610009D709 /* PopularSwiftRepositoriesTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				987D55FF2ED5FAD900F85F5F /* Exceptions for "PopularSwiftRepositoriesTests" folder in "PopularSwiftRepositories" target */,
+			);
 			path = PopularSwiftRepositoriesTests;
-			sourceTree = "<group>";
-		};
-		9894839F2ECF5F610009D709 /* PopularSwiftRepositoriesUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PopularSwiftRepositoriesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -154,6 +165,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				987D562F2ED6474D00F85F5F /* SnapshotTestingCustomDump in Frameworks */,
+				987D562B2ED6474D00F85F5F /* InlineSnapshotTesting in Frameworks */,
+				987D562D2ED6474D00F85F5F /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +193,6 @@
 			children = (
 				989483872ECF5F5F0009D709 /* PopularSwiftRepositories */,
 				989483952ECF5F610009D709 /* PopularSwiftRepositoriesTests */,
-				9894839F2ECF5F610009D709 /* PopularSwiftRepositoriesUITests */,
 				985079E42ECF897B00531562 /* Frameworks */,
 				989483862ECF5F5F0009D709 /* Products */,
 			);
@@ -238,6 +251,9 @@
 			);
 			name = PopularSwiftRepositoriesTests;
 			packageProductDependencies = (
+				987D562A2ED6474D00F85F5F /* InlineSnapshotTesting */,
+				987D562C2ED6474D00F85F5F /* SnapshotTesting */,
+				987D562E2ED6474D00F85F5F /* SnapshotTestingCustomDump */,
 			);
 			productName = PopularSwiftRepositoriesTests;
 			productReference = 989483922ECF5F610009D709 /* PopularSwiftRepositoriesTests.xctest */;
@@ -255,9 +271,6 @@
 			);
 			dependencies = (
 				9894839E2ECF5F610009D709 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				9894839F2ECF5F610009D709 /* PopularSwiftRepositoriesUITests */,
 			);
 			name = PopularSwiftRepositoriesUITests;
 			packageProductDependencies = (
@@ -299,6 +312,7 @@
 			mainGroup = 9894837C2ECF5F5F0009D709;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				987D56292ED6474700F85F5F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 989483862ECF5F5F0009D709 /* Products */;
@@ -662,6 +676,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		987D56292ED6474700F85F5F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.18.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		987D562A2ED6474D00F85F5F /* InlineSnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 987D56292ED6474700F85F5F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = InlineSnapshotTesting;
+		};
+		987D562C2ED6474D00F85F5F /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 987D56292ED6474700F85F5F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		987D562E2ED6474D00F85F5F /* SnapshotTestingCustomDump */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 987D56292ED6474700F85F5F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTestingCustomDump;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9894837D2ECF5F5F0009D709 /* Project object */;
 }

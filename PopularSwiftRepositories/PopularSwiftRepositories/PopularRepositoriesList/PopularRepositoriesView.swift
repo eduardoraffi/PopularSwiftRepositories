@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PopularRepositoriesView<ViewModel: PopularRepositoryViewModelProtocol>: View {
+internal struct PopularRepositoriesView<ViewModel: PopularRepositoryViewModelProtocol>: View {
 
     @ObservedObject private var viewModel: ViewModel
     @Environment(Router.self) private var router

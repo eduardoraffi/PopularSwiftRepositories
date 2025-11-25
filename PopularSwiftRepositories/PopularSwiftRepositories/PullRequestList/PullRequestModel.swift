@@ -63,3 +63,28 @@ extension PullRequestModel: UserProtocol {
     }
 
 }
+
+extension PullRequestModel {
+
+    static func mock() -> Self {
+        Self(id: 3014906147,
+             htmlUrl: "https://api.github.com/repos/exelban/stats/pulls/2820",
+             title: "Translate IP and connection messages to Chinese",
+             user: User(id: 62989049, login: "supebase", avatarUrl: ""),
+             body: "A very long commit message that will go over two lines to test the multiline text support.",
+             createdAt: "2025-11-16T10:02:58Z")
+        
+    }
+
+    static func mockList() -> [Self] {
+        (1...10).map { id in
+            Self(id: id,
+                 htmlUrl: "https://api.github.com/repos/exelban/stats/pulls/2820",
+                 title: "Translate IP and connection messages to Chinese",
+                 user: User(id: 62989049, login: "supebase", avatarUrl: ""),
+                 body: "A very long commit message that will go over two lines to test the multiline text support.",
+                 createdAt: "2025-11-16T10:02:58Z")
+        }
+    }
+
+}

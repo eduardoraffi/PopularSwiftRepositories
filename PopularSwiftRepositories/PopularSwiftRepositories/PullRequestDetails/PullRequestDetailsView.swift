@@ -1,10 +1,9 @@
 import SwiftUI
 import WebKit
 
-struct PullRequestDetailsView: View {
+internal struct PullRequestDetailsView: View {
 
     @Environment(\.dismiss) var dismiss
-
     private var urlString: String
 
     init(urlString: String) {
