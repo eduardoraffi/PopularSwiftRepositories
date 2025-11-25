@@ -1,5 +1,4 @@
 import SwiftUI
-import Foundation
 
 internal struct DefaultCardDetailsView: View {
 
@@ -14,7 +13,7 @@ internal struct DefaultCardDetailsView: View {
             }
         }
     }
-    
+
     private var descriptionLineLimit: Int = 3
 
     init(userItem: UserProtocol, cardViewType: CardViewType) {
@@ -26,11 +25,13 @@ internal struct DefaultCardDetailsView: View {
         VStack {
             Text(userItem.name)
                 .font(.system(size: 16))
+                .foregroundColor(.primaryTextColor)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .lineLimit(1)
                 .padding([.leading,.top], 10)
             Text(userItem.description)
                 .font(.system(size: 12))
+                .foregroundColor(.primaryTextColor)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .lineLimit(descriptionLineLimit)
                 .padding([.leading, .top], 8)
@@ -41,7 +42,7 @@ internal struct DefaultCardDetailsView: View {
                     .font(.system(size: 12))
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding([.leading, .top], 8)
-                    .foregroundColor(.orange)
+                    .foregroundColor(.secondaryTextColor)
             case .repositoryList:
                 getCountersComponent()
             }
@@ -52,14 +53,12 @@ internal struct DefaultCardDetailsView: View {
     private func getCountersComponent() -> some View {
         HStack {
             CounterWithImage(imageName: Image.branchIcon.description,
-                             counter: userItem.forks,
-                             foregroundColor: .gray)
+                             counter: userItem.forks)
             CounterWithImage(imageName: Image.starIcon.description,
-                             counter: userItem.stargazersCount,
-                             foregroundColor: .yellow)
+                             counter: userItem.stargazersCount)
             .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0))
         }.frame(maxWidth: .infinity, alignment: .leading)
             .padding([.leading, .top], 8)
     }
-    
+
 }

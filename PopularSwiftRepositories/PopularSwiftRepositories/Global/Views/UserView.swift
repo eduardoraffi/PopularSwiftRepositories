@@ -30,8 +30,8 @@ internal struct UserView: View {
             }
             Text(userItem.fullName)
                 .multilineTextAlignment(.center)
-                .font(.system(size: 12))
-                .foregroundColor(.blue)
+                .font(.system(size: 12, weight: .bold))
+                .foregroundColor(.primaryTextColor)
                 .padding()
         }
     }

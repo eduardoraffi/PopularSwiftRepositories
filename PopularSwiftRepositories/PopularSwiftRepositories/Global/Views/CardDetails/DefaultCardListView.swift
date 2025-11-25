@@ -11,21 +11,8 @@ internal struct DefaultCardListView: View {
     private(set) var userItem: UserProtocol
     private var cardViewMaxHeightMultiplier: CGFloat
     private var cardViewType: CardViewType
-    
-    var body: some View {
-        CardView(content: getCardContent())
-    }
 
-    init(userItem: UserProtocol,
-         cardViewMaxHeightMultiplier: CGFloat = 0.2,
-         cardViewType: CardViewType = .repositoryList) {
-        self.userItem = userItem
-        self.cardViewMaxHeightMultiplier = cardViewMaxHeightMultiplier
-        self.cardViewType = cardViewType
-    }
-    
-    @ViewBuilder
-    private func getCardContent() -> some View {
+    var body: some View {
         let mainBounds = UIScreen.main.bounds.size
         let userViewMaxWidth = mainBounds.width * 0.33
         let userViewHeight = mainBounds.height * cardViewMaxHeightMultiplier
@@ -34,6 +21,22 @@ internal struct DefaultCardListView: View {
             UserView(userItem: userItem, cardViewType: cardViewType)
                 .frame(maxWidth: userViewMaxWidth, alignment: .center)
         }.frame(height: userViewHeight)
+            .background(Color.secondaryBackgroundColor)
+            .overlay(RoundedRectangle(cornerRadius: 8)
+                .stroke(Color.primaryTextColor.opacity(0.8),lineWidth: 1))
+    }
+
+    init(userItem: UserProtocol,
+         cardViewMaxHeightMultiplier: CGFloat = 0.18,
+         cardViewType: CardViewType = .repositoryList) {
+        self.userItem = userItem
+        self.cardViewMaxHeightMultiplier = cardViewMaxHeightMultiplier
+        self.cardViewType = cardViewType
+    }
+
+    @ViewBuilder
+    private func getCardContent() -> some View {
+        
     }
 
 }

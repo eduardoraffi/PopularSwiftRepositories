@@ -1,6 +1,6 @@
 import Foundation
 
-internal class PopularRepositoriesListRepository: PopularRepositoryProtocol {
+internal class PopularRepositoriesRepository: PopularRepositoryProtocol {
 
     private var apiClient: APIClientProtocol
 

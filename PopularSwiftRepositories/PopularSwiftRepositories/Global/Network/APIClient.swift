@@ -4,21 +4,22 @@ internal protocol APIClientProtocol {
     func request<T: Decodable>(_ urlRequest: URLRequest) async throws -> T
 }
 
-// Melhorar api error
 enum APIError: Error, LocalizedError {
     case invalidURL
     case invalidResponse
     case decodingError(Error)
     case serverError(Int)
-    case networkError(Error)
-    
+
     var errorDescription: String? {
         switch self {
-        case .invalidURL: return "Invalid URL"
-        case .invalidResponse: return "Invalid response from server"
-        case .decodingError(let err): return "Decoding error: \(err.localizedDescription)"
-        case .serverError(let code): return "Server error \(code)"
-        case .networkError(let err): return "Network error: \(err.localizedDescription)"
+        case .invalidURL: 
+            return "Invalid URL"
+        case .invalidResponse: 
+            return "Invalid response from server"
+        case let .decodingError(err):
+            return "Decoding error: \(err.localizedDescription)"
+        case let .serverError(code):
+            return "Server error \(code)"
         }
     }
 }
@@ -34,7 +35,7 @@ final class APIClient: APIClientProtocol {
         guard (200...299).contains(httpResponse.statusCode) else {
             throw APIError.serverError(httpResponse.statusCode)
         }
-        
+
         do {
             return try JSONDecoder().decode(T.self, from: data)
         } catch {

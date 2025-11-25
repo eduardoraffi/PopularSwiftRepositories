@@ -2,9 +2,9 @@ import SwiftUI
 
 internal final class PullRequestListViewModel: PullRequestListViewModelProtocol {
 
-    @Published var pullRequestList: [PullRequestModel]?
-    @Published var isLoading = true
-    @Published var errorMessage: String?
+    @Published internal var pullRequestList: [PullRequestModel]?
+    @Published internal var isLoading = true
+    @Published internal var errorMessage: String?
     private var repository: PullRequestListProtocol
     private var userItem: UserItem
 
@@ -14,7 +14,7 @@ internal final class PullRequestListViewModel: PullRequestListViewModelProtocol 
     }
 
     @MainActor
-    internal func fetchPullRequestList(prStatus: PullRequestStatus = .open) async {
+    internal func fetchPullRequestList(prStatus: PullRequestStatus) async {
         isLoading = true
         do {
             self.pullRequestList = try await repository.fetchPullRequests(fullName: userItem.fullName, prStatus: prStatus)

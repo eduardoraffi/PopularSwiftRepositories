@@ -5,5 +5,8 @@ internal protocol PullRequestListProtocol: AnyObject {
 }
 
 internal protocol PullRequestListViewModelProtocol: ObservableObject {
+    var pullRequestList: [PullRequestModel]? { get set }
+    var isLoading: Bool { get set }
+    var errorMessage: String? { get set }
     func fetchPullRequestList(prStatus: PullRequestStatus) async
 }

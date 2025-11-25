@@ -5,7 +5,13 @@ internal protocol PopularRepositoryProtocol: AnyObject {
 }
 
 internal protocol PopularRepositoryViewModelProtocol: ObservableObject {
-    func fetchPopularRepositories() async
+    var popularRepositories: [UserItem] { get set }
+    var isLoading: Bool { get set }
+    var errorMessage: String? { get set }
+    var actualPage: Int { get set }
+
+    func fetchPopularRepositories(_ shouldAppendNewItems: Bool, data: Data?) async
     func loadNextPage() async
+    func saveToSceneStorage(_ popularRepositories: [UserItem]) -> Data?
 }
 
