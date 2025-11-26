@@ -1,0 +1,14 @@
+name: Pull Requests trigger
+
+on:
+  pull_request:
+    branches: '**'
+  
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-dept: 0
+      - run: fastlane tests
