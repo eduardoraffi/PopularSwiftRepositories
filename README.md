@@ -39,6 +39,8 @@ You can also run the application with instruments for validation purposes... But
 
 This app are running tests with fastlane. 
 
+<img width="974" height="536" alt="Screenshot 2025-11-25 at 23 56 45" src="https://github.com/user-attachments/assets/3bf6f5b8-c817-4377-ad28-1ba1f2b644e7" />
+
 You just have to run on your terminal ```fastlane tests``` (configured for PopuparSwiftRepositories.xcworkspace and PopuparSwiftRepositoriesTests scheme). 
 
 ## Authors
