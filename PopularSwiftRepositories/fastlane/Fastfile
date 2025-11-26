@@ -1,0 +1,11 @@
+#default_platform(:ios)
+
+  desc "Runtests"
+  lane :tests do
+    run_tests(
+      workspace: "PopularSwiftRepositories.xcworkspace",
+      device: "iPhone 17 Pro",
+      scheme: "PopularSwiftRepositoriesTests",
+      output_directory: "fastlane/test_output"
+    )
+  end

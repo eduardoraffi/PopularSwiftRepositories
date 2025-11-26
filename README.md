@@ -35,6 +35,12 @@ Clone&Run on Xcode
 You can also run the application with instruments for validation purposes... But to cut corners, you can see below a screenshot of instruments with running app.
 <img width="800" height="360" alt="Screenshot 2025-11-25 at 20 25 08" src="https://github.com/user-attachments/assets/2d09f94c-b533-464b-9ba2-317713f0cffe" />
 
+### Fastlane
+
+This app are running tests with fastlane. 
+
+You just have to run on your terminal ```fastlane tests``` (configured for PopuparSwiftRepositories.xcworkspace and PopuparSwiftRepositoriesTests scheme). 
+
 ## Authors
 
 Eduardo Raffi 

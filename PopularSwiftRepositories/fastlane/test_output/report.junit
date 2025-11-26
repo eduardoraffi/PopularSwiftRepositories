@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='PopularSwiftRepositoriesTests.xctest' tests='9' failures='0'>
+  <testsuite name='PopularSwiftRepositoriesTests.PopularRepositoriesViewModelTestCase' tests='5' failures='0'>
+    <testcase classname='PopularSwiftRepositoriesTests.PopularRepositoriesViewModelTestCase' name='testFetchPopularRepositories' time='0.002'/>
+    <testcase classname='PopularSwiftRepositoriesTests.PopularRepositoriesViewModelTestCase' name='testFetchPopularRepositoriesWithErrorOnPage100' time='0.003'/>
+    <testcase classname='PopularSwiftRepositoriesTests.PopularRepositoriesViewModelTestCase' name='testLoadFromScneStorage' time='0.002'/>
+    <testcase classname='PopularSwiftRepositoriesTests.PopularRepositoriesViewModelTestCase' name='testLoadNextPage' time='0.001'/>
+    <testcase classname='PopularSwiftRepositoriesTests.PopularRepositoriesViewModelTestCase' name='testSaveToSceneStorage' time='0.002'/>
+  </testsuite>
+  <testsuite name='PopularSwiftRepositoriesTests.PopularSwiftRepositoriesTestCase' tests='4' failures='0'>
+    <testcase classname='PopularSwiftRepositoriesTests.PopularSwiftRepositoriesTestCase' name='testFetchPopularRepositoriesWithDataError' time='0.004'/>
+    <testcase classname='PopularSwiftRepositoriesTests.PopularSwiftRepositoriesTestCase' name='testFetchPopularRepositoriesWithDecodingError' time='0.002'/>
+    <testcase classname='PopularSwiftRepositoriesTests.PopularSwiftRepositoriesTestCase' name='testFetchPopularRepositoriesWithoutError' time='0.007'/>
+    <testcase classname='PopularSwiftRepositoriesTests.PopularSwiftRepositoriesTestCase' name='testFetchPopularRepositoriesWithResponseCodeError' time='0.001'/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "1A036469-35C9-4263-91C8-3A7ADBC85067",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "DefaultCardListViewTestCase",
+        "DefaultCardListViewTestCase\/testCardViewForPullRequests()",
+        "DefaultCardListViewTestCase\/testDefaultCardView()",
+        "PopularRepositoriesViewTestCase",
+        "PopularRepositoriesViewTestCase\/testEmptyResponse()",
+        "PopularRepositoriesViewTestCase\/testFullResponse()",
+        "PullRequestListViewTestCaseItem",
+        "PullRequestListViewTestCaseItem\/testDefaultOpenResponse()",
+        "PullRequestListViewTestCaseItem\/testErrorResponse()",
+        "PullRequestStatusSelectorTestCase"
+      ],
+      "target" : {
+        "containerPath" : "container:PopularSwiftRepositories.xcodeproj",
+        "identifier" : "989483912ECF5F610009D709",
+        "name" : "PopularSwiftRepositoriesTests"
+      }
+    }
+  ],
+  "version" : 1
+}
