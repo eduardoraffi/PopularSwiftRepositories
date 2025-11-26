@@ -4,11 +4,11 @@
 
 This application have the goal to let the user see all the most popular Swift repoisitories in GitHub. 
 In main screen (1st screen) you'll be able to infinite scroll trough popular swift repositories.
-<img width="603" height="1311" alt="simulator_screenshot_53604BD8-E660-4F32-A943-168412D5247F" src="https://github.com/user-attachments/assets/00b0882f-ee0d-4062-97ef-8589f400e6bf" />
+<img width="201" height="437" alt="simulator_screenshot_53604BD8-E660-4F32-A943-168412D5247F" src="https://github.com/user-attachments/assets/00b0882f-ee0d-4062-97ef-8589f400e6bf" />
 You can click in any card to see all opened and closed Pull Requests for the selected project
-<img width="603" height="1311" alt="simulator_screenshot_5A234962-2BD4-4F2D-B881-4C3F98A8CC21" src="https://github.com/user-attachments/assets/99469b80-03b6-4bf7-aeb3-fe138829c3f2" />
+<img width="201" height="437" alt="simulator_screenshot_5A234962-2BD4-4F2D-B881-4C3F98A8CC21" src="https://github.com/user-attachments/assets/99469b80-03b6-4bf7-aeb3-fe138829c3f2" />
 Also, you can click whatever openned or closed pull requests and the application will host a WebView so you can browse all informations of the clicked item
-<img width="603" height="1311" alt="simulator_screenshot_ADACBBF9-30AF-4E82-98E3-F96E78817719" src="https://github.com/user-attachments/assets/9eb7dc4d-fd54-4bb8-a575-7529531561a1" />
+<img width="201" height="437" alt="simulator_screenshot_ADACBBF9-30AF-4E82-98E3-F96E78817719" src="https://github.com/user-attachments/assets/9eb7dc4d-fd54-4bb8-a575-7529531561a1" />
 
 ### Architecture
 
