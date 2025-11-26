@@ -5,12 +5,12 @@ name: Swift
 
 on:
   push:
-    branches:
-      - 'master'
-      - 'feature/**'
+    branches: '**'
 jobs:
   build:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-dept: 0
       - run: fastlane tests
