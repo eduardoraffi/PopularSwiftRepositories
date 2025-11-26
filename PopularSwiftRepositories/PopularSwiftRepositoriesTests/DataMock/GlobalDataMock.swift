@@ -1,11 +1,13 @@
 import Foundation
 
 internal enum JsonFileNames: String {
+    
     case popularRepositoriesResponse = "PopularRepositoriesResponse"
     case pullRequestListResponse = "PullRequestListResponse"
     case userItemListResponse = "UserItemListResponse"
     case popularRepositoriesResponseDecodingError = "PopularRepositoriesResponseDecodingError"
     case pullRequestListResponseDecodingError = "PullRequestListResponseDecodingError"
+    
 }
 
 final class GlobalDataMock {
